@@ -7,12 +7,12 @@ public class User {
     private String password;
     // 用户ID
     private int id;
-    // 用户状态
-    private String status;
+    // 用户状态 使用枚举类来表示    
+    private UserStatus status;
 
     public User() {}
 
-    public User(String username, String password, int id, String status) {
+    public User(String username, String password, int id, UserStatus status) {
         this.username = username;
         this.password = password;
         this.id = id;
@@ -40,7 +40,7 @@ public class User {
     }
 
     public String getStatus() {
-        return status;
+        return status.getStatus();
     }
 
     public void setUsername(String username) {
@@ -55,7 +55,7 @@ public class User {
         this.id = id;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 }

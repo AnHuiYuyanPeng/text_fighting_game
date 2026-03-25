@@ -40,7 +40,7 @@ public class User {
     }
 
     public String getStatus() {
-        return status.getStatus();
+        return status == null ? "未设置" : status.getStatus();
     }
 
     public void setUsername(String username) {

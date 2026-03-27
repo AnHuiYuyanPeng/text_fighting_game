@@ -21,7 +21,7 @@ public class Login {
                 case "3" -> exit();
                 default -> System.out.println("输入错误，请重新输入");
             }
-        }
+         }
     }
 
     // 用户登陆
@@ -61,7 +61,10 @@ public class Login {
             }
             if (password.equals(getPassword(users, username))) {
                 lockedCount = 0; // 重置锁定次数
-                break;
+                // 登录成功 进入游戏
+                Fighting fighting = new Fighting();
+                fighting.gameStart(username);
+                return;
             } else {
                 lockedCount++;
                 System.out.println("密码错误 请重新输入 你还有" + (3 - lockedCount) + "次机会");
@@ -77,10 +80,8 @@ public class Login {
                 continue;
             }
         }
-
         if (lockedCount >= 3)
             return;
-        System.out.println("登录成功");
     }
 
     // 用户注册

@@ -1,17 +1,18 @@
 package com.fighting.domain;
 
 public class Character {
-    String name; // 角色名称
-    int HP; // 血量
-    int maxHP; // 最大血量
-    int attack; // 攻击力
-    int defense; // 防御力
+    public String name; // 角色名称
+    public int HP; // 血量
+    public int maxHP; // 最大血量
+    public int attack; // 攻击力
+    public int defense; // 防御力
 
     public Character(String name, int HP, int attack, int defense) {
         this.name = name;
         this.HP = HP;
         this.attack = attack;
         this.defense = defense;
+        this.maxHP = HP;
     }
 
     // 是否存活

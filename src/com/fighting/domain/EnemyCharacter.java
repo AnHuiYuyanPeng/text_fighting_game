@@ -2,8 +2,8 @@ package com.fighting.domain;
 
 public class EnemyCharacter extends Character {
 
-    String skill; // 技能名称
-    boolean defending; // 是否防御
+    public String skill; // 技能名称
+    public boolean defending; // 是否防御
 
     public EnemyCharacter(String name, int HP, int attack, int defense, String skill) {
         super(name, HP, attack, defense);
@@ -21,6 +21,9 @@ public class EnemyCharacter extends Character {
         // 受到伤害
         super.isDamage(damage);
         this.defending = false;
+    }
+    public String getSkill() {
+        return skill;
     }
 
 }
